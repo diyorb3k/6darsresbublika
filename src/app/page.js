@@ -1,4 +1,4 @@
-import rasimlar from "../../public/search.svg"
+import rasimlar from "../../public/search.svg";
 
 const countriesData = [
   {
@@ -67,43 +67,43 @@ const countriesData = [
   },
 ];
 
-
 const Hom = () => {
   return (
-   <>
-      <div className="container sm-auto my-[48px] justify-between items-center flex">
-          <input
-          
-            type="text"
-            placeholder="Search for a country…"
-            class="shadow-custom p-2 border rounded-lg focus:outline-none"
-          />
+    <>
+      <div className="container mx-auto my-12 flex flex-col sm:flex-row sm:justify-between items-center">
+        <input
+          type="text"
+          placeholder="Search for a country…"
+          className="mb-4 sm:mb-0 shadow-custom p-2 border rounded-lg focus:outline-none sm:w-1/2 md:w-1/3 lg:w-1/4"
+        />
+        <select className="shadow-custom p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 sm:w-1/3 md:w-1/4 lg:w-1/5">
+          <option value="">Filter by Region</option>
+          <option value="option1">Africa</option>
+          <option value="option2">Asia</option>
+          <option value="option3">Europe</option>
+          <option value="option4">Oceania</option>
+        </select>
+      </div>
 
-
-<select
-  class="shadow-custom p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
->
-  <option value="">Filter by Region</option>
-  <option value="option1">Africa </option>
-  <option value="option2">Asia </option>
-  <option value="option3">Europe </option>
-  <option value="option3">Oceania </option>
-</select>
-        </div>{" "}
-    <div className="container sm-auto ] flex flex-wrap gap-[73px] justify-betrween">
-         
-      {countriesData.map((country) => (
-        <div key={country.id} className="country-card p-4 shadow-custom   rounded shadow-lg w-[264px] h-[336px]">
-          <img src={country.flag} alt={`${country.country} flag`} className="w-[267px]" />
-          <h2 className="text-xl font-bold">{country.country}</h2>
-          <p>Population: {country.population.toLocaleString()}</p>
-          <p>Region: {country.region}</p>
-          <p>Capital: {country.capital}</p>
-        </div>
-      ))}
-    </div>
-   
-   </>
+      <div className="container mx-auto mx-auto flex flex-wrap gap-8 justify-center sm:justify-between">
+        {countriesData.map((country) => (
+          <div
+            key={country.id}
+            className="country-card p-4 shadow-custom rounded-lg shadow-lg w-[85%] sm:w-[45%] md:w-[30%] lg:w-[22%]"
+          >
+            <img
+              src={country.flag}
+              alt={`${country.country} flag`}
+              className="w-full h-40 object-cover rounded-t-lg"
+            />
+            <h2 className="text-lg font-bold mt-4">{country.country}</h2>
+            <p className="text-sm">Population: {country.population.toLocaleString()}</p>
+            <p className="text-sm">Region: {country.region}</p>
+            <p className="text-sm">Capital: {country.capital}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
