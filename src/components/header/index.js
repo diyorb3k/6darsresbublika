@@ -17,7 +17,7 @@ const Header = () => {
   }, [darkMode]);
 
   return (
-    <div className="bg-#fff] my-[52px]">
+    <div className="bg-#fff]">
       <header>
     
         <div className="container mx-auto shadow-custom py-[23px] flex justify-between items-center">

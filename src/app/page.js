@@ -1,3 +1,5 @@
+import rasimlar from "../../public/search.svg"
+
 const countriesData = [
   {
     id: 1,
@@ -69,10 +71,12 @@ const countriesData = [
 const Hom = () => {
   return (
    <>
-      <div className="container sm-auto justify-between items-center flex">
+      <div className="container sm-auto my-[48px] justify-between items-center flex">
+        <img src={rasimlar } alt=""/>
           <input
+          
             type="text"
-            placeholder="Matn kiriting"
+            placeholder="Search for a country…"
             class="shadow-custom p-2 border rounded-lg focus:outline-none"
           />
 
@@ -86,7 +90,7 @@ const Hom = () => {
   <option value="option3">Variant 3</option>
 </select>
         </div>{" "}
-    <div className="container sm-auto  h-[200vh] flex flex-wrap gap-[64px]">
+    <div className="container sm-auto  h-[200vh] flex flex-wrap gap-[64px] justify-betrween">
          
       {countriesData.map((country) => (
         <div key={country.id} className="country-card p-4 shadow-custom   rounded shadow-lg w-[264px] h-[336px]">
