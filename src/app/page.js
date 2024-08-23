@@ -68,12 +68,28 @@ const countriesData = [
 
 const Hom = () => {
   return (
-    <div className="container sm-auto  h-[100vh] flex flex-wrap gap-[64px]">
-      <div>
-        
-      </div>
+   <>
+      <div className="container sm-auto justify-between items-center flex">
+          <input
+            type="text"
+            placeholder="Matn kiriting"
+            class="shadow-custom p-2 border rounded-lg focus:outline-none"
+          />
+
+
+<select
+  class="shadow-custom p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+>
+  <option value="">Tanlang...</option>
+  <option value="option1">Variant 1</option>
+  <option value="option2">Variant 2</option>
+  <option value="option3">Variant 3</option>
+</select>
+        </div>{" "}
+    <div className="container sm-auto  h-[200vh] flex flex-wrap gap-[64px]">
+         
       {countriesData.map((country) => (
-        <div key={country.id} className="country-card p-4 border m-2 rounded shadow-lg w-[264px]">
+        <div key={country.id} className="country-card p-4 shadow-custom   rounded shadow-lg w-[264px] h-[336px]">
           <img src={country.flag} alt={`${country.country} flag`} className="w-[267px]" />
           <h2 className="text-xl font-bold">{country.country}</h2>
           <p>Population: {country.population.toLocaleString()}</p>
@@ -82,6 +98,8 @@ const Hom = () => {
         </div>
       ))}
     </div>
+   
+   </>
   );
 };
 
