@@ -72,7 +72,6 @@ const Hom = () => {
   return (
    <>
       <div className="container sm-auto my-[48px] justify-between items-center flex">
-        <img src={rasimlar } alt=""/>
           <input
           
             type="text"
@@ -84,13 +83,14 @@ const Hom = () => {
 <select
   class="shadow-custom p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
 >
-  <option value="">Tanlang...</option>
-  <option value="option1">Variant 1</option>
-  <option value="option2">Variant 2</option>
-  <option value="option3">Variant 3</option>
+  <option value="">Filter by Region</option>
+  <option value="option1">Africa </option>
+  <option value="option2">Asia </option>
+  <option value="option3">Europe </option>
+  <option value="option3">Oceania </option>
 </select>
         </div>{" "}
-    <div className="container sm-auto  h-[200vh] flex flex-wrap gap-[64px] justify-betrween">
+    <div className="container sm-auto ] flex flex-wrap gap-[73px] justify-betrween">
          
       {countriesData.map((country) => (
         <div key={country.id} className="country-card p-4 shadow-custom   rounded shadow-lg w-[264px] h-[336px]">

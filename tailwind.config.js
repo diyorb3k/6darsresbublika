@@ -10,11 +10,11 @@ module.exports = {
   ],
   theme: {
     boxShadow: {
-      'custom': '0px 0px 7px 2px rgba(0, 0, 0, 0.03)',
+      'custom': '0px 9px 13px 9px rgba(0, 0, 0, 0.03)',
     },
-    boxShadow: {
-      'custom': '0px 2px 4px 0px rgba(0, 0, 0, 0.06)', 
-    },
+    // boxShadow: {
+    //   'custom': '0px 2px 4px 0px rgba(0, 0, 0, 0.06)', 
+    // },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
